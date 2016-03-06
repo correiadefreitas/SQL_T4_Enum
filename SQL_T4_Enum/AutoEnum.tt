@@ -1,3 +1,4 @@
+/// Author: José Pedro Correia de Freitas
 <#@ template debug="false" hostSpecific="true" language="C#" #>
 <#@ assembly name="System.Data" #>
 <#@ import namespace="System.Data" #>
@@ -24,7 +25,7 @@ entities.Add(new Entity() {EnumNameSpace = "model.Enums",
 								TableValueColumn="id",
 								WhereCondition=""});
 
-this.WriteLine("//Do NOT CHANGE THIS FILE - Auto generated code from AppAutoEnums.tt template");
+this.WriteLine("//Do NOT CHANGE THIS FILE - Auto generated code from AutoEnums.tt template");
 this.WriteLine("//To generate this file, open .tt file and save it");
 
 //Geração dos enums
@@ -40,13 +41,13 @@ foreach (Entity entity in entities)
 namespace <#= entity.EnumNameSpace #> {
 
 	/// <summary>
-	/// Schema enum   : <#= entity.EnumNameSpace #>
-	/// Nome enum     : <#= entity.EnumName #>
-	/// Tabela        : <#= entity.TableSchema #>.<#= entity.TableName #>
-	/// Coluna Valor  : <#= entity.TableValueColumn #>
-	/// Coluna Texto  : <#= entity.TableTextColumn #>
+	/// Namespace    : <#= entity.EnumNameSpace #>
+	/// Name         : <#= entity.EnumName #>
+	/// Type         : <#= entity.EnumType #>
+	/// Table        : <#= entity.TableSchema #>.<#= entity.TableName #>
+	/// Value column : <#= entity.TableValueColumn #>
+	/// Text column  : <#= entity.TableTextColumn #>
     /// </summary>
-
 	public enum <#= Entity.ParseEntityField(entity.EnumName) + (entity.EnumType == "int" ? "" : " : " + entity.EnumType ) #> 
 	{
 <#
