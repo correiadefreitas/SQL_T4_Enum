@@ -1,4 +1,3 @@
-/// Author: José Pedro Correia de Freitas
 <#@ template debug="false" hostSpecific="true" language="C#" #>
 <#@ assembly name="System.Data" #>
 <#@ import namespace="System.Data" #>
@@ -9,6 +8,7 @@
 <#@ import namespace="System.IO" #>
 <#@ output extension=".cs" #>
 <#
+// Author: José Pedro Correia de Freitas (2014)
 
 string path = Path.GetDirectoryName(Host.TemplateFile);
 // Be sure to include default database name

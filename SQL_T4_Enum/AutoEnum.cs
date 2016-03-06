@@ -1,4 +1,3 @@
-/// Author: José Pedro Correia de Freitas
 //Do NOT CHANGE THIS FILE - Auto generated code from AutoEnums.tt template
 //To generate this file, open .tt file and save it
 namespace model.Enums {
